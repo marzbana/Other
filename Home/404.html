@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Callback URL</title>
+  </head>
+  <body>
+    <script>
+      // Extract the code and state parameters from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const code = urlParams.get("code");
+      const state = urlParams.get("state");
+
+      // Redirect to your application's homepage or another page
+      window.location.href = `http://localhost:8000/?code=${code}&state=${state}`;
+    </script>
+  </body>
+</html>

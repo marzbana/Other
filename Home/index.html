@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spotify Auth Callback</title>
+  </head>
+  <body>
+    <h1>Spotify Auth Callback</h1>
+    <p>Please wait while you are redirected back to the app...</p>
+    <script>
+      // Send the URL of the page, including the authorization code and state, to the parent window
+      window.opener.postMessage(window.location.href, '*');
+      window.close();
+    </script>
+  </body>
+</html>

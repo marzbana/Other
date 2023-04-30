@@ -1,0 +1,3 @@
+#dont track the folder home/node_modules, do it
+Home/node_modules
+```

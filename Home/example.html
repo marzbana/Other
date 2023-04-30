@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Form</title>
+    <link rel="stylesheet" href="exampls.css">
+  </head>
+  <body>
+    <form>
+      <label for="number1">Number 1:</label>
+      <input type="number" id="number1"><br>
+    
+      <label for="number2">Number 2:</label>
+      <input type="number" id="number2"><br>
+    
+      <p id="result"></p>
+    </form>
+
+    <script>
+      const number1 = document.getElementById('number1');
+      const number2 = document.getElementById('number2');
+      const result = document.getElementById('result');
+    
+      number1.addEventListener('input', calculate);
+      number2.addEventListener('input', calculate);
+    
+      function calculate() {
+        const value1 = Number(number1.value);
+        const value2 = Number(number2.value);
+        const sum = value1 + value2;
+        if(value2>0)
+        result.textContent = `The sum is ${sum}`;
+      }
+    </script>
+  </body>
+</html>
